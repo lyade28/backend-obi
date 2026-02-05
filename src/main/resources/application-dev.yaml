@@ -1,0 +1,43 @@
+server:
+  port: 8086
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/obi_v1?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimum-idle: 0
+      maximum-pool-size: 40
+      pool-name: hikariPool
+      max-lifetime: 9000
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+    #   properties:
+    #      hibernate:
+    #         format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: cissokho.karim.abdou@gmail.com
+    password: cltg zsxc hhyr wigx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    protocol: smtp
+
+# Dossier d'upload en dev (créé à la racine du projet au lancement)
+upload:
+  path: uploads
+  image: uploads

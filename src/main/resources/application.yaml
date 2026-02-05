@@ -1,0 +1,50 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 50000MB
+      max-request-size: 50000MB
+
+server:
+  servlet:
+    context-path: /obi/v1/
+  port: 8086
+
+springdoc:
+  default-consumes-media-type: application/json
+
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+projet:
+  securite:
+    jwtSecret: 2b44b0b00fd822d8ce753e54dac3dc4e06c2725f7db930f3b9924468b53194dbccdbe23d7baa5ef5fbc414ca4b2e64700bad60c5a7c45eaba56880985582fba4
+    jwtExpiration: 86400000 # a day  avant 30
+    jwtRefreshToken: 604800000 # 7 days avant 300
+
+upload:
+  #path: /Users/g2k-fs-akcissokho/Documents/docs/uploads/starter-kits
+  #image: /Users/g2k-fs-akcissokho/Documents/docs/uploads/starter-kits
+
+  path: /Users/g2k-fs-emdiop
+  image: /Users/g2k-fs-emdiop
+
+smtp:
+  server:
+    host: "smtp.gmail.com"
+    from: "cissokho.karim.abdou@gmail.com"
+    password: "cltg zsxc hhyr wigx"
+
+app:
+  file:
+    regex-splitter: "@##___@##"
+  url:
+    front: http://localhost:4200/#/auth
+
+url:
+  logo:
+    obi: http://localhost:8086/obi/v1/static/logo-image.png
+
+interval: PT30S

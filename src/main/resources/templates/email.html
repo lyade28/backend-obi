@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="margin-top: 5%; margin-bottom: 5%; margin-left: 1%;">
+        <h4 th:if="${anonimous == false}" th:text="${name}"></h4>
+        <p th:utext="${content}"></p>
+    </div>
+
+    <div style="background-color: #eee; height: 10%; text-align: center; margin-top: 3%; border-top: 1px solid #111; padding: 10px; width: 100%">
+        <p>Merci de ne pas répondre à ce courriel. Les courriels envoyés à cette adresse ne recevront pas de réponse.</p>
+        <p>Copuright &copy; 2025 <a href="https://www.ods.sn">ODS</a>, Tous droits réservés.</p>
+    </div>
+</body>
+</html>
